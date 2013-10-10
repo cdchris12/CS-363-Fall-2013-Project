@@ -15,11 +15,12 @@ nav ul
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
 	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-	padding: 0 20px;
-	border-radius: 10px;  
+	padding: 0 1em;
+	border-radius: 1.5em;  
 	list-style: none;
 	position: relative;
 	display: inline-table;
+	width: 95%; // Set the width of the navbar as a percentage of the window width
 }
 
 nav ul:after 
@@ -29,6 +30,8 @@ nav ul:after
 
 nav ul li {
 	float: left;
+	position: relative;
+	width: 20%; // Set the width of the nav bar selections
 }
 
 nav ul li:hover 
@@ -46,13 +49,19 @@ nav ul li:hover a
 
 nav ul li a 
 {
-	display: block; padding: 25px 40px;
-	color: #757575; text-decoration: none;
+	display: block;
+	padding: 5px 4px; // Height first, width second
+	color: #757575; 
+	text-decoration: none;
+	text-align: center; // Centers all the text in the navbar
 }
 
 nav ul ul {
-	background: #5f6975; border-radius: 0px; padding: 0;
-	position: absolute; top: 100%;
+	background: #5f6975; 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
 }
 
 nav ul ul li 
@@ -61,11 +70,12 @@ nav ul ul li
 	border-top: 1px solid #6b727c;
 	border-bottom: 1px solid #575f6a;
 	position: relative;
+	width: 100%; // Has to be here to set the length of the clickable area of the line items which appear on hover.
 }
 
 nav ul ul li a 
 {
-	padding: 15px 40px;
+	padding: 5px 4px;
 	color: #fff;
 }
 
@@ -76,6 +86,8 @@ nav ul ul li a:hover
 
 nav ul ul ul 
 {
-	position: absolute; left: 100%; top:0;
+	position: absolute; 
+	left: 100%; 
+	top:0;
 }
 
