@@ -38,5 +38,55 @@
 		<h1>It works!</h1>
 		<p>This is the default web page for this server.</p>
 		<p>The web server software is running but no content has been added, yet. Blah blah blah blah blah blah blah blah</p>
+		
+		<script type="text/javascript">
+
+			  //pick a day of the week and store it in a var
+
+			  var today = "Friday";
+
+			  //check today var value and act accordingly
+
+			  switch(today)
+
+			  {
+
+			  //in case value corresponds to Saturday or to Sunday do this:
+
+			  case "Saturday":
+
+				case "Sunday":
+
+			  alert("It's the weekend: great!");
+
+			  document.write("Today is " + today);
+
+			  //no need to keep going:
+
+			  break;
+
+			  //in case value corresponds to Friday do this
+
+			  case "Friday":
+
+			  alert("Almost weekend time!");
+
+			  document.write("Today is " + today);
+
+			  //no need to keep going
+
+			  break;
+
+			  //in all other cases do this instead
+
+			  default:
+
+			  alert("Just an ordinary weekday: keep up the good work");
+
+			  document.write("Today is " + today);
+
+			  }
+
+			  </script>
 	</body>
 </html>
