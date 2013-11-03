@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+ <meta charset="utf-8" />
+ 
+ <link rel="stylesheet" href="login2.0.css" type="text/css" />
+
+ <title>
+ 	Login
+ </title>
+	<body>
+		<div id="container">
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required autofocus />
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required />
+				<div id="lower">
+					<input type="checkbox"><label for="checkbox">Keep me logged   </label>
+					<input type="submit" onclick="check()" value="Login">
+				</div><!--/ lower-->
+			</form>
+			<div id="signup">
+				<a href="#toRegister" onclick="openReg();"class="toRegister">Need to register? Click here</a>
+		</div>
+	
+
+		<script language="javascript">
+
+        	function check()/*function to check userid & password*/
+        	{
+        		/*the following code checkes whether the entered userid and password are matching*/
+        		var usr = document.getElementById('username');
+        		var pswd = document.getElementById('password')
+            	if(usr == "admin" && pswd == "admin")
+            	{
+             	   window.location = "index.html"/*opens the target page while Id & password matches*/  
+            	}
+           		else
+            	{
+                	//alert("Error Password or Username")/*displays error message*/
+            	}
+        	}
+        	function openReg() {
+        		openWindow = window.open("register.html","newwin", "height = 630, width = 440, toolbar=no,,scrollbars="+scroll+", menubar=no")
+        	}
+
+    	</script>
+    </body>
+</html>

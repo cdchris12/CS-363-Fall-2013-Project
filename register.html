@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+    <meta charset="utf-8" />
+ 
+    <link rel="stylesheet" href="register.css" type="text/css" />
+
+    <title>
+        Register
+    </title>
+        <body>    
+    <div id="container">
+        <form name="signup-form">
+            <label for="firstname">First name:</label>
+            <input id="firstname" name="firstname" type="text" title="Please enter your firstname" placeholder="Olivia" autofocus required />
+    
+            <label for="lastname">Last name:</label>
+            <input id="lastname" name="lastname" type="text" title="Please enter your lastname" placeholder="Wheeler" required />
+    
+            <label for="studentid">Student number:</label>
+            <input id="studentid" name="studentid" type="text" title="Please your enter student number" placeholder="1234567" required />
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" title="Please enter your school email address" placeholder="olivia.wheeler@my.und.edu" required />
+    
+            <label for="password">Password:</label>
+            <span id="checkMessage" class="checkMessage"></span>
+            <input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
+
+            <label for="password">Confirm Password:</label> <span id="confirmMessage" class="confirmMessage"></span> 
+            <input id="password2" name="password2" type="password" title="Please re-enter password." placeholder="******" onkeyup="checkPass(); return false;" required /> 
+
+    
+            <input type="submit" value="Register" />
+            <script type="text/javascript">
+
+            function checkPass() {
+
+                //Store the password field objects into variables ...
+                var pass1 = document.getElementById('password');
+                var pass2 = document.getElementById('password2');
+                //Store the Confimation Message Object ...
+                var message = document.getElementById('confirmMessage');
+                //Set the colors we will be using ...
+                var goodColor = "#ddffdd";
+                var badColor = "#ffdddd";
+                //Compare the values in the password field 
+                //and the confirmation field
+                if(pass1.value == pass2.value){
+                    //The passwords match. 
+                    //Set the color to the good color and inform
+                    //the user that they have entered the correct password 
+                    pass2.style.backgroundColor = goodColor;
+                    message.style.color = "#66cc66";
+                    message.innerHTML = "Passwords Match"
+                }
+                else{
+                    //The passwords do not match.
+                    //Set the color to the bad color and
+                    //notify the user.
+                    pass2.style.backgroundColor = badColor;
+                    message.style.color = "#ff6666";
+                    message.innerHTML = "Passwords Do Not Match"
+                }
+            }  
+            </script>
+        </form>
+    </div>
+</html>
