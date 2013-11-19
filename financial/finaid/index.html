@@ -36,64 +36,90 @@
 		</nav>
 		
 		<heading><h1>Financial Aid</h1></heading>
-		<bodyText><p>This is the default web page for Financial Aid.</p>
-		<p>Fix this page!</p>
-		</br>
-		</br>
-		<table id="finAid">
-			<!-- Table header -->
-				<thead>
-					<tr>
-						<th scope="col" id="Financial Aid">Financial Aid</th>
-					</tr>
-				</thead>
-				
-			<!-- Table footer -->
-				<tfoot>
-			        <tr>
-			              <td>Stuff</td>
-			        </tr>
-				</tfoot>
-				
-			<!-- Table body -->
-				<tbody>
-					<tr>
-						<td>more stuff</td>
-					</tr>
-				</tbody>
-		</table>
-		
-		<script type="text/javascript">
-		//pick a day of the week and store it in a var
-		
-			var today = "Friday";
-			//check today var value and act accordingly
-		
-			switch(today)
-			{
-				//in case value corresponds to Saturday or to Sunday do this:
-				case "Saturday":
+		<bodyText>
+        <p align="center-justify"> Please select one or more awards from the list below. If you elect not to receive Financial Aid, please check the "No Aid" box below. once you have made your selection(s), please click "Submit".</p>
+        <br />
+        <br />
+        <div class="checkboxes"><form1>
+		<form name="form1" method="post" action="">
+		  <p>
+		    <label>
+		      <input type="checkbox" name="Aid" value="checkbox1" id="CheckboxGroup1_0" align="baseline">
+		      <span>Subsidized Loans: $3,500.00</span></label>
+		    <br />
+		    <label>
+		      <input type="checkbox" name="Aid" value="checkbox2" id="CheckboxGroup1_1" align="baseline">
+		      <span>Un-subsidized Loans: $7,200.00</span></label>		    
+            <br />
+		    <label>
+		      <input type="checkbox" name="Aid" value="checkbox3" id="CheckboxGroup1_2" align="baseline">
+		      <span>Federal Grants: $1,250.00</span></label>		    
+            <br>
+			<br>
+			<label>
+		      <input type="checkbox" name="NoAid" value="checkbox4" id="CheckboxGroup1_3" align="baseline" onClick="remind()">
+		      <span><b>No Aid: <u>Decline all Financial Aid offers</u></b>.</span></label>              		<br>
+					<br>
+              <p><input type="submit" name="show" value="Submit" onclick="val();return false"></p>
+
+	      </p>
+    </form></form1>
+    <div class="checkboxes">
+		<p>&nbsp; </p>
+    <script type="text/javascript">
+	
+		function remind()
+		{
+			if ((form1.CheckboxGroup1_0.checked)||(form1.CheckboxGroup1_1.checked)||(form1.CheckboxGroup1_2.checked)){ // If aid boxes are checked, remind them they cannot take aid and no aid.
+				alert("Please only select \"Aid\" or \"No Aid\".");
+				form1.CheckboxGroup1_3.checked = false;}
+		}
+	
+		function val()
+		{
+			total = 0; // Reset the form
 			
-				case "Sunday":
-					alert("It's the weekend: great!");
-					document.write("Today is " + today);
-			  	
-					//no need to keep going:
-					break;
+			if ((!form1.CheckboxGroup1_0.checked)&&(!form1.CheckboxGroup1_1.checked)&&(!form1.CheckboxGroup1_2.checked)&&(!form1.CheckboxGroup1_3.checked)){ // Check to see if no boxes are checked
+				alert("Please make a selection before clicking the \"Submit\" button.");
+				return;}
 			
-					//in case value corresponds to Friday do this
-					case "Friday":
-						alert("Almost weekend time!");
-						document.write("<p>Today is " + today + "</p></bodyText>");
+			else if (flag == 1){ // Check the flag to see if the form has been submitted previously
+			alert("You have already submitted your financial aid choice.");
+			return;}
+			
+			else if (form1.CheckboxGroup1_3.checked){ // No Aid selected, ensure total is set to 0.
+				total = 0;}
+			
+			else{				
+				if (form1.CheckboxGroup1_0.checked){ // Subsidized Loans Checkbox
+					total += 3500;}
 				
-						//no need to keep going
-						break;
+				if (form1.CheckboxGroup1_1.checked){ // Un-subsidized Loans Checkbox
+					total += 7200;}
 				
-					//in all other cases do this instead
-					default:
-						alert("Just an ordinary weekday: keep up the good work");
-						document.write("Today is " + today + "</bodyText>");
+				if (form1.CheckboxGroup1_2.checked){ // Federal Grants Checkbox
+					total += 1250;}
 			}
-		</script>
+			
+			if (total == 0){ // No Aid Selected
+				if (confirm("You have elected to receive no financial aid. Are you sure you want to receive no financial aid?")){ // If true (agree)
+					flag = 1;
+					alert("You have elected to receive no financial aid. Thank you for using our system!");}
+				else{ // If false (do not agree)
+					return;}
+			}
+			
+			else{ // Aid Selected
+				if (confirm("You have elected to receive $"+ total +" in financial aid. Is this amount correct?")){
+					flag = 1;
+					alert("You have elected to recieve $" + total + " in Financial Aid. Thank you for using our system!");}
+				else{ // If false (do not agree)
+					return;}
+			}
+		}
+		
+		var total; // Holds the computed total amount of aid elected to receive.
+		var flag = 0; // If true, the form has already been submitted.
+		 </script>
 	</body>
 </html>

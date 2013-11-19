@@ -106,3 +106,26 @@ bodyText
 	text-align: center; /* Necessary for centering the text */
 }
 
+form
+{
+	margin: 0 auto; /* Necessary for centering the text */
+	text-align: center; /* Necessary for centering the text */
+}
+
+.checkboxes label
+{
+    display: block;
+    float:none;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.checkboxes input
+{
+    vertical-align: middle;
+}
+
+.checkboxes label span
+{
+    vertical-align: middle;
+}
