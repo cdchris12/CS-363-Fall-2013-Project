@@ -6,18 +6,22 @@
 
 package csci.pkg363.web.site;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author iamchrisbowtome
  */
 public class Login extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Login
      */
     public Login() {
+        
         initComponents();
     }
 
@@ -148,20 +152,28 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     // Submit button clicked
+        for (int i = 0; i < Database.db.length; i++){
+            //check for user in database
+            if (Database.db[i].getUserName().equalsIgnoreCase(jTextField1.getText().toString() ) ) {
+                //check for correct password
         
-        if(true /*CHECK FOR USER*/){ // Check database for user
-            if(true /*CHECK FOR PASS*/){ // Check password
-                new Main().setVisible(true);    // New Main window
-                dispose();
-                // If user and pass correct, close Login() and open Main()
-            } else { // Incorrect password
-                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
-                // If user found and pass not correct, alert that pass 
-                // is incorrect.
+                if (Database.db[i].getPassword().equals(jPasswordField1.getText().toString() ) ){
+                    new Main().setVisible(true); //new Main window
+                    dispose(); // if user and passswd correct, close Login() and open Main()
+                } else {
+                    // Incorrect password
+                    JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
+                    // If user found and pass not correct, alert that pass 
+                    // is incorrect.
+                }
+            }else {
+                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
             } 
-        } else { // Incorrect username
-             JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);       
-        }
+        }          
+               
+                
+    
+       
         // If user not found, alert that username is incorrect.
     }//GEN-LAST:event_jButton1MouseClicked
 

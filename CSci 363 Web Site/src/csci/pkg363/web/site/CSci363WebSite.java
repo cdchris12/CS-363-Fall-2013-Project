@@ -18,12 +18,9 @@ public class CSci363WebSite {
      */
     public static void main(String[] args) {
 
-      List<Student> db = new ArrayList<>();
-      db.add(new Student("Johnny","Appleseed","M","johnny.appleseed", "admin",
-              "336-201-9119", "123 Scotty Dr.", "Apt # 13", "Fort Pierce", "FL",
-              "34952", "Darth", "Vader","902-867-5309", "409 DeathStar Lane","","Galaxy","NV","69087"));
-      
 
+      
+      Database.initDB();
         // TODO code application logic here
         new Login().setVisible(true);  // New Login window
         
@@ -33,7 +30,7 @@ public class CSci363WebSite {
         // Test the boolean variable and run Main() when it is true.
         
         //new Main().setVisible(true);    // New Main window
->>>>>>> d1ecce264f86ae244fd603f2710eda9a86ff9310
+//>>>>>>> d1ecce264f86ae244fd603f2710eda9a86ff9310
     }
     
 }
