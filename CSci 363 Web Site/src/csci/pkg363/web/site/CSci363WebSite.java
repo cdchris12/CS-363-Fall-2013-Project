@@ -17,8 +17,14 @@ public class CSci363WebSite {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new Login().setVisible(true);
-        new Main().setVisible(true);
+        new Login().setVisible(true);  // New Login window
+        
+        // Run code that determines what you entered into the login form and
+        // returns true if user/pass correct.
+        
+        // Test the boolean variable and run Main() when it is true.
+        
+        //new Main().setVisible(true);    // New Main window
     }
     
 }

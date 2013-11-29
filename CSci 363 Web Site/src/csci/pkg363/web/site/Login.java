@@ -6,6 +6,8 @@
 
 package csci.pkg363.web.site;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author iamchrisbowtome
@@ -42,6 +44,11 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Login");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jTextField1.setText("Username");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -50,6 +57,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox1.setSelected(true);
         jCheckBox1.setText("Keep me logged in?");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,11 +66,16 @@ public class Login extends javax.swing.JFrame {
         });
 
         jButton3.setText("Clear");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         jPasswordField1.setText("Password");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseClicked(evt);
             }
         });
 
@@ -124,13 +137,50 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        // TODO add your handling code here:
+    // Username field clicked
+        
+        if (jTextField1.getText().toString().equalsIgnoreCase("Username")){
+            // Clear Password Field
+            jTextField1.setText("");
+        }
     }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    // Submit button clicked
+        
+        if(true /*CHECK FOR USER*/){ // Check database for user
+            if(true /*CHECK FOR PASS*/){ // Check password
+                new Main().setVisible(true);    // New Main window
+                dispose();
+                // If user and pass correct, close Login() and open Main()
+            } else { // Incorrect password
+                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
+                // If user found and pass not correct, alert that pass 
+                // is incorrect.
+            } 
+        } else { // Incorrect username
+             JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);       
+        }
+        // If user not found, alert that username is incorrect.
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    // Clear button clicked
+        
+        // Clear the text fields
+        jPasswordField1.setText("Username");
+        jTextField1.setText("Password");
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    @SuppressWarnings("empty-statement")
+    private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
+    // Password field clicked
+        if (jPasswordField1.getText().toString().equalsIgnoreCase("Password")){
+            // Clear Password Field
+            jPasswordField1.setText("");
+        }
+    }//GEN-LAST:event_jPasswordField1MouseClicked
 
     /**
      * @param args the command line arguments
