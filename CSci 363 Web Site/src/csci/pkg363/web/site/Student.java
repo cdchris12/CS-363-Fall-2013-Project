@@ -50,6 +50,7 @@ public class Student {
         _zip = "";
         _ecFName = "";
         _ecLName = "";
+        _ecPhone = "";
         _ecAddress1 ="";
         _ecAddress2 ="";
         _ecCity ="";
@@ -73,6 +74,7 @@ public class Student {
         _zip = zip;
         _ecFName = ecFN;
         _ecLName = ecLN;
+        _ecPhone = ecPn;
         _ecAddress1 =ecAdd1;
         _ecAddress2 =ecAdd2;
         _ecCity =eccity;

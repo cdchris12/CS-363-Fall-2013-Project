@@ -58,10 +58,10 @@ public class Main extends javax.swing.JFrame {
             jTextField7.setText(usr.getEcPhone());
         }
         if ( !usr.getEcCity().isEmpty() ){
-            jTextField7.setText(usr.getEcCity());
+           jTextField10.setText(usr.getEcCity());
         }
         if ( !usr.getEcState().isEmpty() ){
-            jTextField7.setText(usr.getEcState() );
+            jTextField11.setText(usr.getEcState() );
         }
     }
 
