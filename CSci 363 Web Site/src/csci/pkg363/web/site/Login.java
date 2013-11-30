@@ -23,6 +23,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         
         initComponents();
+        
     }
 
     /**
@@ -53,11 +54,21 @@ public class Login extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("Username");
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField1MouseClicked(evt);
+            }
+        });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
             }
         });
 
@@ -80,6 +91,11 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPasswordField1MouseClicked(evt);
+            }
+        });
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
             }
         });
 
@@ -159,7 +175,8 @@ public class Login extends javax.swing.JFrame {
         
                 if (Database.db[i].getPassword().equals(jPasswordField1.getText().toString() ) ){
                     new Main().setVisible(true); //new Main window
-                    dispose(); // if user and passswd correct, close Login() and open Main()
+                    dispose();
+                    break;// if user and passswd correct, close Login() and open Main()
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
@@ -170,9 +187,6 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
             } 
         }          
-               
-                
-    
        
         // If user not found, alert that username is incorrect.
     }//GEN-LAST:event_jButton1MouseClicked
@@ -193,6 +207,21 @@ public class Login extends javax.swing.JFrame {
             jPasswordField1.setText("");
         }
     }//GEN-LAST:event_jPasswordField1MouseClicked
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    // Pressed enter on password field
+        jButton1MouseClicked(null);
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    // Pressed enter on username field
+        jButton1MouseClicked(null);
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    // Pressed enter on login button
+        jButton1MouseClicked(null);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

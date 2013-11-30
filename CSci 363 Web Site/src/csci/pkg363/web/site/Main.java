@@ -44,6 +44,8 @@ public class Main extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox();
         jPanel6 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -118,17 +120,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 166, Short.MAX_VALUE)
-        );
-
         jButton3.setText("Search");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -136,39 +127,60 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setText("Enroll");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("To Unenroll, Click Here");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton1)
+                                .addGap(24, 24, 24))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel6)
+                                .addGap(8, 8, 8)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton2)
+                                .addGap(27, 27, 27)
+                                .addComponent(jRadioButton3))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(189, 189, 189)
+                        .addComponent(jButton3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6)
-                        .addGap(8, 8, 8)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jRadioButton2)
-                        .addGap(27, 27, 27)
-                        .addComponent(jRadioButton3)))
-                .addContainerGap(38, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton7)
+                .addGap(30, 30, 30))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,9 +197,13 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addGap(2, 2, 2)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton6))
+                .addGap(14, 14, 14))
         );
 
         jTabbedPane2.addTab("Enrollment", jPanel2);
@@ -411,49 +427,6 @@ public class Main extends javax.swing.JFrame {
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
     // Selected item from combo box
         
-        // Evaluate which item was picked
-        String selected = jComboBox1.getSelectedItem().toString();
-        
-        //"Select One", "CSci", "Biol", "Chem", "Math"
-        
-        if (selected.equalsIgnoreCase("Select One")){
-            jPanel6.removeAll();
-        } else if (selected.equalsIgnoreCase("CSci")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.validate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Biol")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Chem")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Math")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-            JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
-        }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -462,47 +435,299 @@ public class Main extends javax.swing.JFrame {
         // Evaluate which item was picked
         String selected = jComboBox1.getSelectedItem().toString();
         
-        //"Select One", "CSci", "Biol", "Chem", "Math"
-        
-        if (selected.equalsIgnoreCase("Select One")){
-            jPanel6.removeAll();
-        } else if (selected.equalsIgnoreCase("CSci")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.validate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Biol")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Chem")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-        } else if (selected.equalsIgnoreCase("Math")){
-            jPanel6.removeAll();
-            JCheckBox cb = new JCheckBox("Computer Science 160 - Full");
-            JCheckBox cb1 = new JCheckBox("Computer Science 242 - Open");
-            jPanel6.add(cb);
-            jPanel6.add(cb1);
-            jPanel6.revalidate();
-            jPanel6.repaint();
-            JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
+        // Evaluate which radiobutton was clicked
+        int radio = -1;
+        if (jRadioButton1.isSelected()){
+            radio = 0;
+        } else if (jRadioButton2.isSelected()){
+            radio = 1;
+        } else if (jRadioButton3.isSelected()){
+            radio = 2;
         } else {
-            JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "Please select a semester to search.", "No Semester Selected", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        //"Select One", "CSci", "Biol", "Chem", "Math"
+        if (radio == 0){
+            if (selected.equalsIgnoreCase("Select One")){
+                jPanel6.removeAll();
+            } else if (selected.equalsIgnoreCase("CSci")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Computer Science 160 - TuTh @ 3:00PM-4:15PM - Enrollment Closed");
+                JCheckBox cb1 = new JCheckBox("Computer Science 242 - MWF @ 2:30PM-3:20PM - Enrollment Closed");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.validate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Biol")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Biology 101 - TuTh @ 3:00PM-4:15PM - Enrollment Closed");
+                JCheckBox cb1 = new JCheckBox("Biology 239 - MWF @ 2:30PM-3:20PM - Enrollment Closed");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Chem")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Chemistry 101 - TuTh @ 3:00PM-4:15PM - Enrollment Closed");
+                JCheckBox cb1 = new JCheckBox("Chemistry 304 - MWF @ 2:30PM-3:20PM - Enrollment Closed");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Math")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Math 160 - TuTh @ 3:00PM-4:15PM - Enrollment Closed");
+                JCheckBox cb1 = new JCheckBox("Math 324 - MWF @ 2:30PM-3:20PM - Enrollment Closed");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
+            }
+        } else if (radio == 1){
+            if (selected.equalsIgnoreCase("Select One")){
+                jPanel6.removeAll();
+            } else if (selected.equalsIgnoreCase("CSci")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Computer Science 160 - TuTh @ 3:00PM-4:15PM - Full");
+                JCheckBox cb1 = new JCheckBox("Computer Science 242 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.validate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Biol")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Biology 101 - TuTh @ 3:00PM-4:15PM - Full");
+                JCheckBox cb1 = new JCheckBox("Biology 239 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Chem")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Chemistry 101 - TuTh @ 3:00PM-4:15PM - Full");
+                JCheckBox cb1 = new JCheckBox("Chemistry 304 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Math")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Math 160 - TuTh @ 3:00PM-4:15PM - Full");
+                JCheckBox cb1 = new JCheckBox("Math 324 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
+            }
+        } else if (radio == 2){
+            if (selected.equalsIgnoreCase("Select One")){
+                jPanel6.removeAll();
+            } else if (selected.equalsIgnoreCase("CSci")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Computer Science 160 - TuTh @ 3:00PM-4:15PM - Open");
+                JCheckBox cb1 = new JCheckBox("Computer Science 242 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.validate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Biol")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Biology 101 - TuTh @ 3:00PM-4:15PM - Open");
+                JCheckBox cb1 = new JCheckBox("Biology 239 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Chem")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Chemistry 101 - TuTh @ 3:00PM-4:15PM - Open");
+                JCheckBox cb1 = new JCheckBox("Chemistry 304 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else if (selected.equalsIgnoreCase("Math")){
+                jPanel6.removeAll();
+                JCheckBox cb = new JCheckBox("Math 160 - TuTh @ 3:00PM-4:15PM - Open");
+                JCheckBox cb1 = new JCheckBox("Math 324 - MWF @ 2:30PM-3:20PM - Open");
+                cb.setVisible(true);
+                cb1.setVisible(true);
+                jPanel6.add(cb);
+                jPanel6.add(cb1);
+                jPanel6.setVisible(true);
+                jPanel6.revalidate();
+                jPanel6.repaint();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
+            }
         }
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    // Enrollment :: Enroll Button Pressed
+        
+        JCheckBox cb = (JCheckBox)jPanel6.getComponent(0);
+        JCheckBox cb1 = (JCheckBox)jPanel6.getComponent(1);
+        int n;
+        
+        String cbTitle = cb.getText();
+        String cb1Title = cb.getText();
+        // Evaluate which item was picked
+        String selected = jComboBox1.getSelectedItem().toString();
+        
+        // Evaluate which radiobutton was clicked
+        int radio = -1;
+        if (jRadioButton1.isSelected()){
+            radio = 0;
+        } else if (jRadioButton2.isSelected()){
+            radio = 1;
+        } else if (jRadioButton3.isSelected()){
+            radio = 2;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Please select a semester to search.", "No Semester Selected", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (radio == 0){ // Fall 2013
+            //
+            if (cb.isSelected() && cb1.isSelected()){ // Selected both classes
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Enrollment for this semester is closed.", "Unable to Enroll", JOptionPane.WARNING_MESSAGE);
+                }
+                System.out.println(n);
+            } else if (cb.isSelected() && !cb1.isSelected()){ // cb !cb1
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Enrollment for this semester is closed.", "Unable to Enroll", JOptionPane.WARNING_MESSAGE);
+                }
+            } else if (!cb.isSelected() && cb1.isSelected()){ // cb1 !cb
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Enrollment for this semester is closed.", "Unable to Enroll", JOptionPane.WARNING_MESSAGE);
+                }
+            } else { // No class selected
+                JOptionPane.showMessageDialog(rootPane, "Please select a class to enroll in.", "No Class Selected", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } else if (radio == 1){ // Spring 2014
+            if (cb.isSelected() && cb1.isSelected()){ // Selected both classes
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "One of the selected classes is fully enrolled.", "Unable to Enroll", JOptionPane.WARNING_MESSAGE);
+                }
+                System.out.println(n);
+            } else if (cb.isSelected() && !cb1.isSelected()){ // cb !cb1
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "One of the selected classes is fully enrolled.", "Unable to Enroll", JOptionPane.WARNING_MESSAGE);
+                }
+            } else if (!cb.isSelected() && cb1.isSelected()){ // cb1 !cb
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // Process enrollments in the db
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Congratulations, you have successfully enrolled in: \n" + cb1Title);
+                }
+            } else { // No class selected
+                JOptionPane.showMessageDialog(rootPane, "Please select a class to enroll in.", "No Class Selected", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } else if (radio == 2){ // Summer 2014
+            if (cb.isSelected() && cb1.isSelected()){ // Selected both classes
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // Process enrollments in the db
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Congratulations, you have successfully enrolled in: \n" + cbTitle + "\nand\n" + cb1Title);
+                }
+                System.out.println(n);
+            } else if (cb.isSelected() && !cb1.isSelected()){ // cb !cb1
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cbTitle + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // Process enrollments in the db
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Congratulations, you have successfully enrolled in: \n" + cbTitle);
+                }
+            } else if (!cb.isSelected() && cb1.isSelected()){ // cb1 !cb
+                n = JOptionPane.showConfirmDialog(rootPane, "You have elected to enroll in the following classes:\n" + cb1Title + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // Process enrollments in the db
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Congratulations, you have successfully enrolled in: \n" + cb1Title);
+                }
+            } else { // No class selected
+                JOptionPane.showMessageDialog(rootPane, "Please select a class to enroll in.", "No Class Selected", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Please select a semester to search.", "No Semester Selected", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    // Enrollment:: Unenroll Button pressed
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -546,6 +771,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
