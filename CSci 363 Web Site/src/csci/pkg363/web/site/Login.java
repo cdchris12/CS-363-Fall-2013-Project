@@ -69,6 +69,11 @@ public class Login extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
 
         jCheckBox1.setSelected(true);
         jCheckBox1.setText("Keep me logged in?");
@@ -94,6 +99,11 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
             }
         });
 
@@ -174,13 +184,13 @@ public class Login extends javax.swing.JFrame {
                 if (Database.db[i].getPassword().equals(jPasswordField1.getText().toString() ) ){
                     Database.user = i;
                     new Main().setVisible(true); //new Main window
-<<<<<<< HEAD
+
                     dispose();
                     break;// if user and passswd correct, close Login() and open Main()
-=======
-                    dispose(); // if user and passswd correct, close Login() and open Main()
+
+                     // if user and passswd correct, close Login() and open Main()
                     
->>>>>>> 4e15bcd13c1c872dd6126a6c7a6c6a4fd40b9017
+
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
@@ -226,6 +236,22 @@ public class Login extends javax.swing.JFrame {
     // Pressed enter on login button
         jButton1MouseClicked(null);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+    //Login :: if user starts typing in textfield it clears    
+        if (jTextField1.getText().toString().equalsIgnoreCase("Username")){
+            // Clear Username Field
+            jTextField1.setText("");
+        }
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+   //Login :: if user starts typing the field clears
+        if (jPasswordField1.getText().toString().equalsIgnoreCase("Password")){
+            // Clear Password Field
+            jPasswordField1.setText("");
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * @param args the command line arguments
