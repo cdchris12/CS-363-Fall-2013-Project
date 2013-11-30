@@ -9,6 +9,7 @@ package csci.pkg363.web.site;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author iamchrisbowtome
@@ -19,7 +20,49 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
+        Student usr = Database.db[Database.user];
+        
+        
         initComponents();
+        if ( !usr.getStreet().isEmpty() ){
+            jTextField1.setText(usr.getStreet());
+        }
+        if( !usr.getOptional().isEmpty()){
+            jTextField2.setText(usr.getOptional());
+        }
+        if ( !usr.getCity().isEmpty() ){
+            jTextField3.setText(usr.getCity());
+        }
+        if ( !usr.getState().isEmpty() ){
+            jTextField4.setText(usr.getState());
+        }
+        if ( !usr.getZip().isEmpty() ){
+            jTextField5.setText(usr.getZip());
+        }
+        if ( !usr.getPhone().isEmpty() ){
+            jTextField8.setText(usr.getPhone() );
+        }
+        if ( !usr.getEcFName().isEmpty() || !usr.getEcLName().isEmpty() ){
+            if (usr.getEcLName().isEmpty() ){
+                jTextField6.setText(usr.getEcFName());
+            } else if (usr.getEcFName().isEmpty() ){
+                 jTextField6.setText(usr.getEcLName());
+            } else {
+                 jTextField6.setText(usr.getEcFName() + " " + usr.getEcLName());
+            }
+        }
+        if ( !usr.getEcStreet().isEmpty() ){
+            jTextField9.setText(usr.getEcStreet());
+        }
+        if ( !usr.getEcPhone().isEmpty() ){
+            jTextField7.setText(usr.getEcPhone());
+        }
+        if ( !usr.getEcCity().isEmpty() ){
+           jTextField10.setText(usr.getEcCity());
+        }
+        if ( !usr.getEcState().isEmpty() ){
+            jTextField11.setText(usr.getEcState() );
+        }
     }
 
     /**
@@ -248,8 +291,18 @@ public class Main extends javax.swing.JFrame {
         });
 
         jTextField2.setText("Apt/Room #");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jTextField3.setText("City");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         jTextField4.setText("State");
 
@@ -728,6 +781,14 @@ public class Main extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
     // Enrollment:: Unenroll Button pressed
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
