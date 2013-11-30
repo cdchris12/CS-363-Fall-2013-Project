@@ -158,6 +158,7 @@ public class Login extends javax.swing.JFrame {
                 //check for correct password
         
                 if (Database.db[i].getPassword().equals(jPasswordField1.getText().toString() ) ){
+                    Database.user = i;
                     new Main().setVisible(true); //new Main window
                     dispose(); // if user and passswd correct, close Login() and open Main()
                 } else {

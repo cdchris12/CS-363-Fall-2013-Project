@@ -16,6 +16,7 @@ import java.util.List;
 public class Database {
     
     public static Student[] db; 
+    public static int user;
     public Database(){
         
     }
