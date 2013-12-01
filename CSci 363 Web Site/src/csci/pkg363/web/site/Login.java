@@ -176,7 +176,12 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     // Submit button clicked
-        for (int i = 0; i < Database.db.length; i++){
+        int i = 0; //local variable for index of Student in database
+        
+        /*the for loop caused null pointer exception if username or
+          * password was incorrect- while loop fixes this */
+        
+        while(Database.db[i]!= null) { 
             //check for user in database
             if (Database.db[i].getUserName().equalsIgnoreCase(jTextField1.getText().toString() ) ) {
                 //check for correct password
@@ -199,7 +204,8 @@ public class Login extends javax.swing.JFrame {
                 }
             }else {
                 JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
-            } 
+            }
+            i++;
         }          
        
         // If user not found, alert that username is incorrect.
