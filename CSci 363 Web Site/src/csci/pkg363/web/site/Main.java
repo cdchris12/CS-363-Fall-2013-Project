@@ -20,49 +20,13 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
-        Student usr = Database.db[Database.user];
+        
         
         
         initComponents();
-        if ( !usr.getStreet().isEmpty() ){
-            jTextField1.setText(usr.getStreet());
-        }
-        if( !usr.getOptional().isEmpty()){
-            jTextField2.setText(usr.getOptional());
-        }
-        if ( !usr.getCity().isEmpty() ){
-            jTextField3.setText(usr.getCity());
-        }
-        if ( !usr.getState().isEmpty() ){
-            jTextField4.setText(usr.getState());
-        }
-        if ( !usr.getZip().isEmpty() ){
-            jTextField5.setText(usr.getZip());
-        }
-        if ( !usr.getPhone().isEmpty() ){
-            jTextField8.setText(usr.getPhone() );
-        }
-        if ( !usr.getEcFName().isEmpty() || !usr.getEcLName().isEmpty() ){
-            if (usr.getEcLName().isEmpty() ){
-                jTextField6.setText(usr.getEcFName());
-            } else if (usr.getEcFName().isEmpty() ){
-                 jTextField6.setText(usr.getEcLName());
-            } else {
-                 jTextField6.setText(usr.getEcFName() + " " + usr.getEcLName());
-            }
-        }
-        if ( !usr.getEcStreet().isEmpty() ){
-            jTextField9.setText(usr.getEcStreet());
-        }
-        if ( !usr.getEcPhone().isEmpty() ){
-            jTextField7.setText(usr.getEcPhone());
-        }
-        if ( !usr.getEcCity().isEmpty() ){
-           jTextField10.setText(usr.getEcCity());
-        }
-        if ( !usr.getEcState().isEmpty() ){
-            jTextField11.setText(usr.getEcState() );
-        }
+        /*method does NOT need to be overridden or made static*/
+        fillUserInfo(); //fills out the students info from Student object
+        
     }
 
     /**
@@ -122,11 +86,11 @@ public class Main extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 509, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 341, Short.MAX_VALUE)
+            .addGap(0, 359, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Home", jPanel1);
@@ -215,9 +179,9 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jButton3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 11, Short.MAX_VALUE)
+                .addGap(0, 19, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,7 +204,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -255,11 +219,11 @@ public class Main extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 509, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 341, Short.MAX_VALUE)
+            .addGap(0, 359, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Financial Aid", jPanel3);
@@ -268,16 +232,21 @@ public class Main extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 509, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 341, Short.MAX_VALUE)
+            .addGap(0, 359, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Transcripts", jPanel4);
 
         jButton1.setText("Change Username");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Change Password");
 
@@ -321,11 +290,26 @@ public class Main extends javax.swing.JFrame {
         jTextField8.setText("Phone Number");
 
         jButton4.setText("Update");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Cancel");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -379,7 +363,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -431,7 +415,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 92, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("User Settings", jPanel5);
@@ -460,7 +444,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
     // User Settings :: Cancel Button Pressed
-        
+        fillUserInfo(); // re-fills out info from student object
         jTabbedPane2.setSelectedIndex(0);
         // Return to home tab
     }//GEN-LAST:event_jButton5MouseClicked
@@ -790,6 +774,38 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //User settings :: change username buttom
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    
+        
+       
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    //User settings :: update button clicked
+        
+        Student usr = Database.db[Database.user];
+        System.out.println("hi");
+        /*on update press all textfields are save to current Student object*/ 
+        usr.setStreet(jTextField1.getText());  
+        usr.setOptional(jTextField2.getText() );
+        usr.setCity(jTextField3.getText() );    
+        usr.setState(jTextField4.getText() );
+        usr.setZip(jTextField5.getText() );
+        usr.setPhone(jTextField8.getText() );
+        usr.setEmergencyContact(jTextField4.getText(),"",jTextField7.getText(),
+                jTextField9.getText(),"",jTextField10.getText(),jTextField11.getText(),"" );
+    
+    }//GEN-LAST:event_jButton4MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -823,6 +839,48 @@ public class Main extends javax.swing.JFrame {
                 new Main().setVisible(true);
             }
         });
+    }
+    public void fillUserInfo(){
+        Student usr = Database.db[Database.user];
+        if ( !usr.getStreet().isEmpty() ){
+            jTextField1.setText(usr.getStreet());
+        }
+        if( !usr.getOptional().isEmpty()){
+            jTextField2.setText(usr.getOptional());
+        }
+        if ( !usr.getCity().isEmpty() ){
+            jTextField3.setText(usr.getCity());
+        }
+        if ( !usr.getState().isEmpty() ){
+            jTextField4.setText(usr.getState());
+        }
+        if ( !usr.getZip().isEmpty() ){
+            jTextField5.setText(usr.getZip());
+        }
+        if ( !usr.getPhone().isEmpty() ){
+            jTextField8.setText(usr.getPhone() );
+        }
+        if ( !usr.getEcFName().isEmpty() || !usr.getEcLName().isEmpty() ){
+            if (usr.getEcLName().isEmpty() ){
+                jTextField6.setText(usr.getEcFName());
+            } else if (usr.getEcFName().isEmpty() ){
+                 jTextField6.setText(usr.getEcLName());
+            } else {
+                 jTextField6.setText(usr.getEcFName() + " " + usr.getEcLName());
+            }
+        }
+        if ( !usr.getEcStreet().isEmpty() ){
+            jTextField9.setText(usr.getEcStreet());
+        }
+        if ( !usr.getEcPhone().isEmpty() ){
+            jTextField7.setText(usr.getEcPhone());
+        }
+        if ( !usr.getEcCity().isEmpty() ){
+           jTextField10.setText(usr.getEcCity());
+        }
+        if ( !usr.getEcState().isEmpty() ){
+            jTextField11.setText(usr.getEcState() );
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

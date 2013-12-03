@@ -6,8 +6,6 @@
 
 package csci.pkg363.web.site;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JOptionPane;
 
 
@@ -71,6 +69,11 @@ public class Login extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
 
         jCheckBox1.setSelected(true);
         jCheckBox1.setText("Keep me logged in?");
@@ -96,6 +99,11 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
             }
         });
 
@@ -168,7 +176,12 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     // Submit button clicked
-        for (int i = 0; i < Database.db.length; i++){
+        int i = 0; //local variable for index of Student in database
+        
+        /*the for loop caused null pointer exception if username or
+          * password was incorrect- while loop fixes this */
+        
+        while(Database.db[i]!= null) { 
             //check for user in database
             if (Database.db[i].getUserName().equalsIgnoreCase(jTextField1.getText().toString() ) ) {
                 //check for correct password
@@ -179,6 +192,13 @@ public class Login extends javax.swing.JFrame {
 
                     dispose();
                     break;// if user and passswd correct, close Login() and open Main()
+<<<<<<< HEAD
+=======
+
+                     // if user and passswd correct, close Login() and open Main()
+                    
+
+>>>>>>> 26ed2a95ac892e7a3a7d8918549f6bada8f6e35d
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
@@ -187,7 +207,8 @@ public class Login extends javax.swing.JFrame {
                 }
             }else {
                 JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
-            } 
+            }
+            i++;
         }          
        
         // If user not found, alert that username is incorrect.
@@ -224,6 +245,22 @@ public class Login extends javax.swing.JFrame {
     // Pressed enter on login button
         jButton1MouseClicked(null);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+    //Login :: if user starts typing in textfield it clears    
+        if (jTextField1.getText().toString().equalsIgnoreCase("Username")){
+            // Clear Username Field
+            jTextField1.setText("");
+        }
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+   //Login :: if user starts typing the field clears
+        if (jPasswordField1.getText().toString().equalsIgnoreCase("Password")){
+            // Clear Password Field
+            jPasswordField1.setText("");
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * @param args the command line arguments
