@@ -176,13 +176,9 @@ public class Login extends javax.swing.JFrame {
                 if (Database.db[i].getPassword().equals(jPasswordField1.getText().toString() ) ){
                     Database.user = i;
                     new Main().setVisible(true); //new Main window
-<<<<<<< HEAD
+
                     dispose();
                     break;// if user and passswd correct, close Login() and open Main()
-=======
-                    dispose(); // if user and passswd correct, close Login() and open Main()
-                    
->>>>>>> 4e15bcd13c1c872dd6126a6c7a6c6a4fd40b9017
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
