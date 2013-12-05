@@ -192,10 +192,7 @@ public class Login extends javax.swing.JFrame {
 
                     dispose();
                     break;// if user and passswd correct, close Login() and open Main()
-
-                     // if user and passswd correct, close Login() and open Main()
-                    
-
+                    // if user and passswd correct, close Login() and open Main()
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect password", "Incorrect Password", JOptionPane.WARNING_MESSAGE);
