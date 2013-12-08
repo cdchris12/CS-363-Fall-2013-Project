@@ -29,6 +29,9 @@ boolean update;
         initComponents();
         /*method does NOT need to be overridden or made static*/
         fillUserInfo(); //fills out the students info from Student object
+        buttonGroup1.add(jRadioButton1); // Add buttons to the group
+        buttonGroup1.add(jRadioButton2); // Add buttons to the group
+        buttonGroup1.add(jRadioButton3); // Add buttons to the group
         
         
     }
@@ -71,6 +74,7 @@ boolean update;
         reason = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         system = new javax.swing.JTabbedPane();
         home = new javax.swing.JPanel();
         enrollment = new javax.swing.JPanel();
@@ -164,7 +168,6 @@ boolean update;
         changePassword.setTitle("Username");
         changePassword.setAlwaysOnTop(true);
         changePassword.setLocationByPlatform(true);
-        changePassword.setMaximumSize(getPreferredSize());
         changePassword.setMinimumSize(getPreferredSize());
 
         jButton4.setText("Accept");
@@ -596,14 +599,13 @@ boolean update;
         jLayeredPane1.setOpaque(true);
 
         decline1.setBackground(new java.awt.Color(204, 204, 204));
-        decline1.setSelected(false);
         decline1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 decline1StateChanged(evt);
             }
         });
-        decline1.setBounds(450, 10, 20, 20);
-        jLayeredPane1.add(decline1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.add(decline1);
+        decline1.setBounds(450, 10, 30, 20);
 
         accept1.setBackground(new java.awt.Color(204, 204, 204));
         accept1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -611,20 +613,20 @@ boolean update;
                 accept1StateChanged(evt);
             }
         });
-        accept1.setBounds(390, 10, 20, 21);
-        jLayeredPane1.add(accept1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.add(accept1);
+        accept1.setBounds(390, 10, 30, 23);
 
         jLabel8.setText("Federal Pell Grant");
+        jLayeredPane1.add(jLabel8);
         jLabel8.setBounds(10, 0, 110, 40);
-        jLayeredPane1.add(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel9.setText("Grant");
+        jLayeredPane1.add(jLabel9);
         jLabel9.setBounds(150, 0, 34, 40);
-        jLayeredPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         offer1.setText("2800.00");
+        jLayeredPane1.add(offer1);
         offer1.setBounds(220, 0, 70, 40);
-        jLayeredPane1.add(offer1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         loot1.setText("0.00");
         loot1.setDisabledTextColor(new java.awt.Color(51, 51, 51));
@@ -634,40 +636,39 @@ boolean update;
                 loot1ActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(loot1);
         loot1.setBounds(290, 10, 70, 20);
-        jLayeredPane1.add(loot1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane3.setBackground(new java.awt.Color(153, 153, 153));
         jLayeredPane3.setForeground(new java.awt.Color(0, 153, 204));
 
-        decline2.setSelected(false);
         decline2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 decline2StateChanged(evt);
             }
         });
-        decline2.setBounds(450, 10, 20, 20);
-        jLayeredPane3.add(decline2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane3.add(decline2);
+        decline2.setBounds(450, 10, 30, 20);
 
         accept2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 accept2StateChanged(evt);
             }
         });
-        accept2.setBounds(390, 10, 20, 21);
-        jLayeredPane3.add(accept2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane3.add(accept2);
+        accept2.setBounds(390, 10, 30, 23);
 
         jLabel14.setText("Federal Sub. Loan");
+        jLayeredPane3.add(jLabel14);
         jLabel14.setBounds(10, 0, 120, 40);
-        jLayeredPane3.add(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel15.setText("Loan");
+        jLayeredPane3.add(jLabel15);
         jLabel15.setBounds(150, 0, 34, 40);
-        jLayeredPane3.add(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         offer2.setText("5800.00");
+        jLayeredPane3.add(offer2);
         offer2.setBounds(220, 0, 70, 40);
-        jLayeredPane3.add(offer2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         loot2.setText("0.00");
         loot2.addActionListener(new java.awt.event.ActionListener() {
@@ -675,8 +676,8 @@ boolean update;
                 loot2ActionPerformed(evt);
             }
         });
+        jLayeredPane3.add(loot2);
         loot2.setBounds(290, 10, 70, 20);
-        jLayeredPane3.add(loot2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane11.setForeground(new java.awt.Color(0, 153, 204));
 
@@ -685,32 +686,32 @@ boolean update;
                 decline4StateChanged(evt);
             }
         });
-        decline4.setBounds(450, 10, 20, 20);
-        jLayeredPane11.add(decline4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane11.add(decline4);
+        decline4.setBounds(450, 10, 30, 20);
 
         accept4.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 accept4StateChanged(evt);
             }
         });
-        accept4.setBounds(390, 10, 20, 21);
-        jLayeredPane11.add(accept4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane11.add(accept4);
+        accept4.setBounds(390, 10, 30, 23);
 
         jLabel38.setText("Microsoft Scholarship");
+        jLayeredPane11.add(jLabel38);
         jLabel38.setBounds(10, 0, 130, 40);
-        jLayeredPane11.add(jLabel38, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel39.setText("Award");
-        jLabel39.setBounds(150, 0, 34, 40);
-        jLayeredPane11.add(jLabel39, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane11.add(jLabel39);
+        jLabel39.setBounds(150, 0, 40, 40);
 
         offer4.setText("450.00");
+        jLayeredPane11.add(offer4);
         offer4.setBounds(220, 0, 70, 40);
-        jLayeredPane11.add(offer4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         loot4.setText("0.00");
+        jLayeredPane11.add(loot4);
         loot4.setBounds(290, 10, 70, 20);
-        jLayeredPane11.add(loot4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane12.setBackground(new java.awt.Color(204, 204, 204));
         jLayeredPane12.setForeground(new java.awt.Color(0, 153, 204));
@@ -722,8 +723,8 @@ boolean update;
                 decline3StateChanged(evt);
             }
         });
-        decline3.setBounds(450, 10, 20, 20);
-        jLayeredPane12.add(decline3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane12.add(decline3);
+        decline3.setBounds(450, 10, 30, 20);
 
         accept3.setBackground(new java.awt.Color(204, 204, 204));
         accept3.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -731,20 +732,20 @@ boolean update;
                 accept3StateChanged(evt);
             }
         });
-        accept3.setBounds(390, 10, 20, 21);
-        jLayeredPane12.add(accept3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane12.add(accept3);
+        accept3.setBounds(390, 10, 30, 23);
 
         jLabel41.setText("VA Ch. 33 Tuition");
+        jLayeredPane12.add(jLabel41);
         jLabel41.setBounds(10, 0, 120, 40);
-        jLayeredPane12.add(jLabel41, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel42.setText("Bursary");
-        jLabel42.setBounds(150, 0, 40, 40);
-        jLayeredPane12.add(jLabel42, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane12.add(jLabel42);
+        jLabel42.setBounds(150, 0, 46, 40);
 
         offer3.setText("7317.22");
+        jLayeredPane12.add(offer3);
         offer3.setBounds(220, 0, 70, 40);
-        jLayeredPane12.add(offer3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         loot3.setText("0.00");
         loot3.addActionListener(new java.awt.event.ActionListener() {
@@ -752,8 +753,8 @@ boolean update;
                 loot3ActionPerformed(evt);
             }
         });
+        jLayeredPane12.add(loot3);
         loot3.setBounds(290, 10, 70, 20);
-        jLayeredPane12.add(loot3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane13.setBackground(new java.awt.Color(153, 153, 153));
         jLayeredPane13.setForeground(new java.awt.Color(0, 153, 204));
@@ -761,52 +762,51 @@ boolean update;
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel44.setText("   Award");
+        jLayeredPane13.add(jLabel44);
         jLabel44.setBounds(10, 0, 60, 40);
-        jLayeredPane13.add(jLabel44, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel45.setBackground(new java.awt.Color(153, 153, 153));
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel45.setText("Type");
         jLabel45.setOpaque(true);
+        jLayeredPane13.add(jLabel45);
         jLabel45.setBounds(140, 0, 40, 40);
-        jLayeredPane13.add(jLabel45, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel46.setText("Offered");
+        jLayeredPane13.add(jLabel46);
         jLabel46.setBounds(214, 0, 50, 40);
-        jLayeredPane13.add(jLabel46, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel7.setText("Decline");
+        jLayeredPane13.add(jLabel7);
         jLabel7.setBounds(440, 0, 50, 40);
-        jLayeredPane13.add(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel47.setText("Accepted");
-        jLabel47.setBounds(292, 0, 62, 40);
-        jLayeredPane13.add(jLabel47, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane13.add(jLabel47);
+        jLabel47.setBounds(292, 0, 60, 40);
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel48.setText("Accept");
+        jLayeredPane13.add(jLabel48);
         jLabel48.setBounds(380, 0, 50, 40);
-        jLayeredPane13.add(jLabel48, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLayeredPane14.setBackground(new java.awt.Color(153, 153, 153));
         jLayeredPane14.setOpaque(true);
 
         displayAid.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         displayAid.setText("$0.00");
-        displayAid.setBounds(140, 0, 80, 60);
-        jLayeredPane14.add(displayAid, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane14.add(displayAid);
+        displayAid.setBounds(140, 0, 120, 60);
 
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel50.setText("Total Finacial Aid:");
-        jLabel50.setBounds(10, 0, 120, 60);
-        jLayeredPane14.add(jLabel50, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane14.add(jLabel50);
+        jLabel50.setBounds(10, 0, 124, 60);
 
         updateFinacialAid.setBackground(new java.awt.Color(153, 153, 153));
         updateFinacialAid.setText("Accept");
-        updateFinacialAid.setOpaque(false);
         updateFinacialAid.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 updateFinacialAidMouseClicked(evt);
@@ -817,19 +817,18 @@ boolean update;
                 updateFinacialAidActionPerformed(evt);
             }
         });
-        updateFinacialAid.setBounds(327, 20, 80, 23);
-        jLayeredPane14.add(updateFinacialAid, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane14.add(updateFinacialAid);
+        updateFinacialAid.setBounds(327, 20, 80, 29);
 
         resetFinacialAid.setBackground(new java.awt.Color(153, 153, 153));
         resetFinacialAid.setText("Reset");
-        resetFinacialAid.setOpaque(false);
         resetFinacialAid.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 resetFinacialAidMouseClicked(evt);
             }
         });
-        resetFinacialAid.setBounds(411, 20, 80, 23);
-        jLayeredPane14.add(resetFinacialAid, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane14.add(resetFinacialAid);
+        resetFinacialAid.setBounds(411, 20, 80, 29);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("*Currency is set to");
@@ -864,7 +863,7 @@ boolean update;
                 .addGroup(aidLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(currency))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -883,9 +882,7 @@ boolean update;
         finacial.setLayout(finacialLayout);
         finacialLayout.setHorizontalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(finacialLayout.createSequentialGroup()
-                .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(finacialManagment)
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -918,13 +915,13 @@ boolean update;
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -935,7 +932,7 @@ boolean update;
             .addGroup(transcriptLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton8)
-                .addGap(103, 103, 103)
+                .addGap(130, 130, 130)
                 .addComponent(jButton9)
                 .addContainerGap())
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1158,15 +1155,11 @@ boolean update;
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(system)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 413, Short.MAX_VALUE)
         );
 
         pack();
@@ -1963,6 +1956,7 @@ boolean update;
     private javax.swing.JRadioButton accept4;
     private javax.swing.JPanel aid;
     private javax.swing.ButtonGroup aidGroup1;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton cancel;
     private javax.swing.JDialog changePassword;
     private javax.swing.JButton confirm;
