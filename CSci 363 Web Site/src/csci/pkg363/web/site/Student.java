@@ -29,7 +29,7 @@ public class Student {
    private String _ecCity;
    private String _ecState;
    private String _ecZip;
-    
+   private String _locale = "US"; 
 
 
 /**
@@ -184,6 +184,12 @@ public class Student {
     }
     public String getEcZip(){
         return _ecZip;
+    }
+    public void setLocale(String l){
+        _locale=l;
+    }
+    public String getLocale(){
+        return _locale;
     }
     
             
