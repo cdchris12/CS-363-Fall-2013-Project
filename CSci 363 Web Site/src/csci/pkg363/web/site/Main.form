@@ -1243,7 +1243,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="finacialManagment" alignment="0" pref="423" max="32767" attributes="0"/>
+                  <Component id="finacialManagment" alignment="0" pref="565" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1899,7 +1899,7 @@
                                       <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="303" max="32767" attributes="0"/>
+                              <EmptySpace pref="235" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

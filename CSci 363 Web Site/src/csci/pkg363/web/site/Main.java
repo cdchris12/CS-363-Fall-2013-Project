@@ -1602,7 +1602,7 @@ boolean update;
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, aidLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         aidLayout.setVerticalGroup(
             aidLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1638,7 +1638,7 @@ boolean update;
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 423, Short.MAX_VALUE)
+            .addComponent(finacialManagment, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
         );
 
         system.addTab("Financial Managment", finacial);
