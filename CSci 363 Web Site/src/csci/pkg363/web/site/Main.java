@@ -595,7 +595,7 @@ boolean update;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(getPreferredSize());
         setMinimumSize(getPreferredSize());
-        setPreferredSize(new java.awt.Dimension(666, 550));
+        setPreferredSize(new java.awt.Dimension(666, 565));
 
         system.setMinimumSize(getPreferredSize());
 
@@ -696,7 +696,7 @@ boolean update;
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
@@ -962,7 +962,7 @@ boolean update;
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1638,7 +1638,7 @@ boolean update;
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 418, Short.MAX_VALUE)
+            .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 423, Short.MAX_VALUE)
         );
 
         system.addTab("Financial Managment", finacial);
@@ -1670,13 +1670,13 @@ boolean update;
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1959,7 +1959,7 @@ boolean update;
                         .addContainerGap()
                         .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(572, Short.MAX_VALUE)
+                        .addContainerGap(581, Short.MAX_VALUE)
                         .addComponent(logout)))
                 .addContainerGap())
             .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -1969,10 +1969,10 @@ boolean update;
             .addGroup(layout.createSequentialGroup()
                 .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 464, Short.MAX_VALUE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 469, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(logout)
-                .addContainerGap())
+                .addGap(38, 38, 38))
         );
 
         pack();
@@ -2038,8 +2038,9 @@ boolean update;
         
         //"Select One", "CSci", "Biol", "Chem", "Math"
         if (radio == 0){
-            if (selected.equalsIgnoreCase("Select One")){
+            if (jComboBox1.getSelectedIndex() == 0){
                 jPanel6.removeAll();
+                JOptionPane.showMessageDialog(rootPane, "Please select a course subject to search.", "No Subject Selected", JOptionPane.WARNING_MESSAGE);
             } else if (selected.equalsIgnoreCase("CSci")){
                 jPanel6.removeAll();
                 JCheckBox cb = new JCheckBox("Computer Science 160 - TuTh @ 3:00PM-4:15PM - Enrollment Closed");
@@ -2088,8 +2089,9 @@ boolean update;
                 JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
             }
         } else if (radio == 1){
-            if (selected.equalsIgnoreCase("Select One")){
+            if (jComboBox1.getSelectedIndex() == 0){
                 jPanel6.removeAll();
+                JOptionPane.showMessageDialog(rootPane, "Please select a course subject to search.", "No Subject Selected", JOptionPane.WARNING_MESSAGE);
             } else if (selected.equalsIgnoreCase("CSci")){
                 jPanel6.removeAll();
                 JCheckBox cb = new JCheckBox("Computer Science 160 - TuTh @ 3:00PM-4:15PM - Full");
@@ -2138,8 +2140,9 @@ boolean update;
                 JOptionPane.showMessageDialog(rootPane, "You have entered an incorrect username", "Incorrect Username", JOptionPane.WARNING_MESSAGE);
             }
         } else if (radio == 2){
-            if (selected.equalsIgnoreCase("Select One")){
+            if (jComboBox1.getSelectedIndex() == 0){
                 jPanel6.removeAll();
+                JOptionPane.showMessageDialog(rootPane, "Please select a course subject to search.", "No Subject Selected", JOptionPane.WARNING_MESSAGE);
             } else if (selected.equalsIgnoreCase("CSci")){
                 jPanel6.removeAll();
                 JCheckBox cb = new JCheckBox("Computer Science 160 - Dr. L.Linus, TuTh @ 3:00PM-4:15PM - Open");
@@ -2359,7 +2362,7 @@ boolean update;
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
     // Transcripts :: Get Transcript button
         
-        jTextArea1.setText("----------------Fall 2013----------------\nCourse\tGrade\tGrade Points\nChem 101\t*\t***\nBio 101\t*\t***\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: ***\n\n----------------Summer 2013----------------\nCourse\tGrade\tGrade Points\nCSci 160\tA\t4.0\nMath 140\tC\t2.0\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: 3.0\n\n----------------Spring 2013----------------\nCourse\tGrade\tGrade Points\nEngl 101\tD\t1.0\nMath 101\tB\t3.0\n---------------------------------------\nCumulative GPA: 2.0 \t Semester GPA: 2.0");
+        jTextArea1.setText("----------------Fall 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nChem 101\t*\t3\t***\nBio 101\t*\t3\t***\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: ***\nTotal Credits: 12\tSemester Credits: *\n\n----------------Summer 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nCSci 160\tA\t3\t4.0\nMath 140\tC\t3\t2.0\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: 3.0\nTotal Credits: 12\tSemester Credits: 6\n\n----------------Spring 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nEngl 101\tD\t3\t1.0\nMath 101\tB\t3\t3.0\n---------------------------------------\nCumulative GPA: 2.0\tSemester GPA: 2.0\nTotal Credits: 6\tSemester Credits: 6");
         jScrollPane1.setVisible(true);
         jScrollPane1.revalidate();
         jScrollPane1.repaint();
