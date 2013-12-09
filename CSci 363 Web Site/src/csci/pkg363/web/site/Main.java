@@ -93,7 +93,6 @@ boolean update;
         jLabel73 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
@@ -535,7 +534,7 @@ boolean update;
             printLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 179, Short.MAX_VALUE)
+                .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(printLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
@@ -696,7 +695,7 @@ boolean update;
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
@@ -739,12 +738,9 @@ boolean update;
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator4)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator3))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -774,12 +770,10 @@ boolean update;
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addComponent(jLabel66)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel67)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel13)
+                                .addComponent(jLabel67))))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel13)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
@@ -787,9 +781,7 @@ boolean update;
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addComponent(jLabel13)
                 .addGap(1, 1, 1)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator3)
-                    .addComponent(jSeparator4))
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel66)
@@ -814,20 +806,20 @@ boolean update;
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(jLabel64))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout homeLayout = new javax.swing.GroupLayout(home);
         home.setLayout(homeLayout);
         homeLayout.setHorizontalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 642, Short.MAX_VALUE)
             .addGroup(homeLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addGap(154, 154, 154)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
+                .addGap(78, 78, 78))
         );
         homeLayout.setVerticalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -835,12 +827,9 @@ boolean update;
                 .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(homeLayout.createSequentialGroup()
-                        .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(20, 20, 20))
-                    .addGroup(homeLayout.createSequentialGroup()
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         system.addTab("Home", home);
@@ -962,7 +951,7 @@ boolean update;
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1350,7 +1339,7 @@ boolean update;
             }
         });
         jLayeredPane1.add(accept1);
-        accept1.setBounds(390, 10, 30, 23);
+        accept1.setBounds(390, 10, 30, 21);
 
         jLabel8.setText("Federal Pell Grant");
         jLayeredPane1.add(jLabel8);
@@ -1392,7 +1381,7 @@ boolean update;
             }
         });
         jLayeredPane3.add(accept2);
-        accept2.setBounds(390, 10, 30, 23);
+        accept2.setBounds(390, 10, 30, 21);
 
         jLabel14.setText("Federal Sub. Loan");
         jLayeredPane3.add(jLabel14);
@@ -1432,7 +1421,7 @@ boolean update;
             }
         });
         jLayeredPane11.add(accept4);
-        accept4.setBounds(390, 10, 30, 23);
+        accept4.setBounds(390, 10, 30, 21);
 
         jLabel38.setText("Microsoft Scholarship");
         jLayeredPane11.add(jLabel38);
@@ -1471,7 +1460,7 @@ boolean update;
             }
         });
         jLayeredPane12.add(accept3);
-        accept3.setBounds(390, 10, 30, 23);
+        accept3.setBounds(390, 10, 30, 21);
 
         jLabel41.setText("VA Ch. 33 Tuition");
         jLayeredPane12.add(jLabel41);
@@ -1479,7 +1468,7 @@ boolean update;
 
         jLabel42.setText("Bursary");
         jLayeredPane12.add(jLabel42);
-        jLabel42.setBounds(150, 0, 46, 40);
+        jLabel42.setBounds(150, 0, 37, 40);
 
         offer3.setText("7317.22");
         jLayeredPane12.add(offer3);
@@ -1524,7 +1513,7 @@ boolean update;
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel47.setText("Accepted");
         jLayeredPane13.add(jLabel47);
-        jLabel47.setBounds(292, 0, 60, 40);
+        jLabel47.setBounds(292, 0, 62, 40);
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel48.setText("Accept");
@@ -1557,7 +1546,7 @@ boolean update;
             }
         });
         jLayeredPane14.add(updateFinacialAid);
-        updateFinacialAid.setBounds(327, 20, 80, 29);
+        updateFinacialAid.setBounds(327, 20, 80, 23);
 
         resetFinacialAid.setBackground(new java.awt.Color(153, 153, 153));
         resetFinacialAid.setText("Reset");
@@ -1567,7 +1556,7 @@ boolean update;
             }
         });
         jLayeredPane14.add(resetFinacialAid);
-        resetFinacialAid.setBounds(411, 20, 80, 29);
+        resetFinacialAid.setBounds(411, 20, 80, 23);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("*Currency is set to");
@@ -1638,7 +1627,7 @@ boolean update;
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 418, Short.MAX_VALUE)
+            .addComponent(finacialManagment, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
         );
 
         system.addTab("Financial Managment", finacial);
@@ -1676,7 +1665,7 @@ boolean update;
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1873,7 +1862,7 @@ boolean update;
                     .addGroup(userSettingsLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         userSettingsLayout.setVerticalGroup(
             userSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1969,7 +1958,7 @@ boolean update;
             .addGroup(layout.createSequentialGroup()
                 .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 464, Short.MAX_VALUE)
+                .addComponent(system, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(logout)
                 .addContainerGap())
@@ -2998,7 +2987,6 @@ boolean update;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea3;
