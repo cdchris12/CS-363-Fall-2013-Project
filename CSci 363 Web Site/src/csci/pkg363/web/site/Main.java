@@ -696,7 +696,7 @@ boolean update;
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
@@ -825,9 +825,9 @@ boolean update;
             .addGroup(homeLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
+                .addGap(80, 80, 80))
         );
         homeLayout.setVerticalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -962,7 +962,7 @@ boolean update;
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1602,7 +1602,7 @@ boolean update;
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, aidLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
         aidLayout.setVerticalGroup(
             aidLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1634,11 +1634,13 @@ boolean update;
         finacial.setLayout(finacialLayout);
         finacialLayout.setHorizontalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finacialManagment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(finacialLayout.createSequentialGroup()
+                .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(finacialManagment, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+            .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 414, Short.MAX_VALUE)
         );
 
         system.addTab("Financial Managment", finacial);
@@ -1670,13 +1672,13 @@ boolean update;
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1959,7 +1961,7 @@ boolean update;
                         .addContainerGap()
                         .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(581, Short.MAX_VALUE)
+                        .addContainerGap(585, Short.MAX_VALUE)
                         .addComponent(logout)))
                 .addContainerGap())
             .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -1969,10 +1971,10 @@ boolean update;
             .addGroup(layout.createSequentialGroup()
                 .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 469, Short.MAX_VALUE)
+                .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(logout)
-                .addGap(38, 38, 38))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -2680,21 +2682,10 @@ boolean update;
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_payActionPerformed
-
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
         // TODO add your handling code here:
         print.setVisible(false);
     }//GEN-LAST:event_jButton15MouseClicked
-
-    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        // TODO add your handling code here:
-        print.setSize(250,140);
-        print.setLocationRelativeTo(summary);
-        print.setVisible(true);
-    }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
@@ -2704,13 +2695,6 @@ boolean update;
         // TODO add your handling code here:
         payment.setVisible(false);
     }//GEN-LAST:event_jButton14MouseClicked
-
-    private void payMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_payMouseClicked
-        // TODO add your handling code here:
-        payment.setSize(200,140);
-        payment.setLocationRelativeTo(summary);
-        payment.setVisible(true);
-    }//GEN-LAST:event_payMouseClicked
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
@@ -2734,6 +2718,24 @@ boolean update;
             jRadioButton1.setSelected(false);
         }
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_payActionPerformed
+
+    private void payMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_payMouseClicked
+        // TODO add your handling code here:
+        payment.setSize(200,140);
+        payment.setLocationRelativeTo(summary);
+        payment.setVisible(true);
+    }//GEN-LAST:event_payMouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        // TODO add your handling code here:
+        print.setSize(250,140);
+        print.setLocationRelativeTo(summary);
+        print.setVisible(true);
+    }//GEN-LAST:event_jButton11MouseClicked
 
     /**
      * @param args the command line arguments
