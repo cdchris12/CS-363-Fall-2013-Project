@@ -595,6 +595,7 @@ boolean update;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(getPreferredSize());
         setMinimumSize(getPreferredSize());
+        setPreferredSize(new java.awt.Dimension(666, 550));
 
         system.setMinimumSize(getPreferredSize());
 
@@ -903,9 +904,9 @@ boolean update;
         enrollmentLayout.setHorizontalGroup(
             enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enrollmentLayout.createSequentialGroup()
-                .addGap(0, 82, Short.MAX_VALUE)
+                .addGap(0, 80, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
             .addGroup(enrollmentLayout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
