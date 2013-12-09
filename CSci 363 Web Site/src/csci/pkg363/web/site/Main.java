@@ -77,6 +77,16 @@ boolean update;
         payment = new javax.swing.JDialog();
         jButton14 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
+        unenroll = new javax.swing.JDialog();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox();
+        uSubmit = new javax.swing.JButton();
+        uPanel = new javax.swing.JPanel();
+        uUnenroll = new javax.swing.JButton();
+        uCancel = new javax.swing.JButton();
         system = new javax.swing.JTabbedPane();
         home = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
@@ -592,6 +602,103 @@ boolean update;
                 .addGap(17, 17, 17))
         );
 
+        jLabel74.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel74.setText("Unenrollment");
+
+        jLabel75.setText("You have chosen to unenroll from classes. Please select the");
+
+        jLabel76.setText("semester and classes you wish to unenroll from below:");
+
+        jLabel77.setText("Semester: ");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall 2013", "Spring 2014", "Summer 2014" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+
+        uSubmit.setText("Submit");
+        uSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uSubmitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout uPanelLayout = new javax.swing.GroupLayout(uPanel);
+        uPanel.setLayout(uPanelLayout);
+        uPanelLayout.setHorizontalGroup(
+            uPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        uPanelLayout.setVerticalGroup(
+            uPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 131, Short.MAX_VALUE)
+        );
+
+        uUnenroll.setText("Unenroll");
+
+        uCancel.setText("Cancel");
+        uCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uCancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout unenrollLayout = new javax.swing.GroupLayout(unenroll.getContentPane());
+        unenroll.getContentPane().setLayout(unenrollLayout);
+        unenrollLayout.setHorizontalGroup(
+            unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, unenrollLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel74)
+                .addGap(158, 158, 158))
+            .addGroup(unenrollLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(unenrollLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel77)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(uSubmit))
+                    .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(unenrollLayout.createSequentialGroup()
+                            .addGap(135, 135, 135)
+                            .addComponent(uUnenroll)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(uCancel))
+                        .addComponent(jLabel75, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(unenrollLayout.createSequentialGroup()
+                            .addComponent(jLabel76)
+                            .addGap(14, 14, 14))
+                        .addComponent(uPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        unenrollLayout.setVerticalGroup(
+            unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(unenrollLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel74)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel75)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel76)
+                .addGap(18, 18, 18)
+                .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel77)
+                    .addComponent(uSubmit))
+                .addGap(18, 18, 18)
+                .addComponent(uPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(uUnenroll)
+                    .addComponent(uCancel))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(getPreferredSize());
         setMinimumSize(getPreferredSize());
@@ -823,7 +930,7 @@ boolean update;
             .addGroup(homeLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
             .addGroup(homeLayout.createSequentialGroup()
@@ -1634,7 +1741,7 @@ boolean update;
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(finacialLayout.createSequentialGroup()
                 .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 14, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1672,7 +1779,7 @@ boolean update;
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -1964,7 +2071,7 @@ boolean update;
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logout)))
                 .addContainerGap())
-            .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(system, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2328,6 +2435,8 @@ boolean update;
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
     // Enrollment:: Unenroll Button pressed
+        unenroll.setLocationRelativeTo(userSettings);
+        unenroll.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -2340,7 +2449,7 @@ boolean update;
 
     private void updateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateUserActionPerformed
     
-        
+        setUserInfo();
        
     }//GEN-LAST:event_updateUserActionPerformed
 
@@ -2372,7 +2481,7 @@ boolean update;
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
     // Transcripts :: Get Transcript button
         
-        jTextArea1.setText("----------------Fall 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nChem 101\t*\t3\t***\nBio 101\t*\t3\t***\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: ***\nTotal Credits: 12\tSemester Credits: *\n\n----------------Summer 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nCSci 160\tA\t3\t4.0\nMath 140\tC\t3\t2.0\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: 3.0\nTotal Credits: 12\tSemester Credits: 6\n\n----------------Spring 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nEngl 101\tD\t3\t1.0\nMath 101\tB\t3\t3.0\n---------------------------------------\nCumulative GPA: 2.0\tSemester GPA: 2.0\nTotal Credits: 6\tSemester Credits: 6");
+        jTextArea1.setText("----------------Fall 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nEE 201\t*\t3\t***\nCSci 363\t*\t3\t***\nCSci 464\t*\t3\t***\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: ***\nTotal Credits: 12\tSemester Credits: *\n\n----------------Summer 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nCSci 160\tA\t3\t4.0\nMath 140\tC\t3\t2.0\n---------------------------------------\nCumulative GPA: 2.5 \t Semester GPA: 3.0\nTotal Credits: 12\tSemester Credits: 6\n\n----------------Spring 2013----------------\nCourse\tGrade\tCredits\tGrade Points\nEngl 101\tD\t3\t1.0\nMath 101\tB\t3\t3.0\n---------------------------------------\nCumulative GPA: 2.0\tSemester GPA: 2.0\nTotal Credits: 6\tSemester Credits: 6");
         jScrollPane1.setVisible(true);
         jScrollPane1.revalidate();
         jScrollPane1.repaint();
@@ -2745,6 +2854,20 @@ boolean update;
         print.setVisible(true);
     }//GEN-LAST:event_jButton11MouseClicked
 
+    private void uSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uSubmitActionPerformed
+    // Enrollment :: Unenroll :: Submit Button Pressed
+        
+    }//GEN-LAST:event_uSubmitActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void uCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uCancelActionPerformed
+        // TODO add your handling code here:
+        unenroll.setVisible(false);
+    }//GEN-LAST:event_uCancelActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2779,6 +2902,64 @@ boolean update;
             }
         });
     }
+    
+    public void setUserInfo(){
+        Student usr = Database.db[Database.user];
+        if (!userName.getText().isEmpty()){
+            usr.setUserName(userName.getText());
+        }
+        if ( !jTextField1.getText().isEmpty() ){
+            usr.setStreet(jTextField1.getText());
+        }
+        if( !jTextField2.getText().isEmpty()){
+            usr.setOptional(jTextField2.getText());
+        }
+        if ( !jTextField3.getText().isEmpty() ){
+            usr.setCity(jTextField3.getText());
+        }
+        if ( !jTextField4.getText().isEmpty() ){
+            usr.setState(jTextField4.getText());
+        }
+        if ( !jTextField5.getText().isEmpty() ){
+            usr.setZip(jTextField5.getText());
+        }
+        if ( !jTextField8.getText().isEmpty() ){
+            usr.setPhone(jTextField8.getText() );
+        }
+        
+        // Fuck it, emergency contact info doesn't work; try to avoid using it.
+        
+        /*// I'm just going to use EcFName instead of First and Last
+        if ( !jTextField6.getText().isEmpty() ){
+            String EcFName = (jTextField6.getText());
+            String EcLName = "";
+        }*/
+        
+        /*if ( !usr.getEcFName().isEmpty() || !usr.getEcLName().isEmpty() ){
+            if (usr.getEcLName().isEmpty() ){
+                jTextField6.setText(usr.getEcFName());
+            } else if (usr.getEcFName().isEmpty() ){
+                 jTextField6.setText(usr.getEcLName());
+            } else {
+                 jTextField6.setText(usr.getEcFName() + " " + usr.getEcLName());
+            }
+        }*/
+        
+        /*if ( !jTextField9.getText().isEmpty() ){
+            String EcStreet = (jTextField9.getText());
+        }
+        if ( !usr.getEcPhone().isEmpty() ){
+            jTextField7.setText(usr.getEcPhone());
+        }
+        if ( !usr.getEcCity().isEmpty() ){
+           jTextField10.setText(usr.getEcCity());
+        }
+        if ( !usr.getEcState().isEmpty() ){
+            jTextField11.setText(usr.getEcState() );
+        }*/
+        usr.setLocale(languageSet.getSelectedItem().toString());
+    }
+    
     public void fillUserInfo(){
         
         Student usr = Database.db[Database.user];
@@ -2910,6 +3091,7 @@ boolean update;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2981,6 +3163,10 @@ boolean update;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
@@ -3051,6 +3237,11 @@ boolean update;
     private javax.swing.JPanel summary;
     private javax.swing.JTabbedPane system;
     private javax.swing.JPanel transcript;
+    private javax.swing.JButton uCancel;
+    private javax.swing.JPanel uPanel;
+    private javax.swing.JButton uSubmit;
+    private javax.swing.JButton uUnenroll;
+    private javax.swing.JDialog unenroll;
     private javax.swing.JButton updateFinacialAid;
     private javax.swing.JDialog updateSuccess;
     private javax.swing.JButton updateUser;
