@@ -668,9 +668,6 @@ boolean update;
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel10Layout.createSequentialGroup()
@@ -681,6 +678,10 @@ boolean update;
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -696,7 +697,7 @@ boolean update;
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
@@ -740,11 +741,7 @@ boolean update;
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator3))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -774,11 +771,13 @@ boolean update;
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addComponent(jLabel66)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel67)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(jLabel67))))
+                    .addComponent(jSeparator4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator3)
                 .addContainerGap())
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel13)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -814,20 +813,22 @@ boolean update;
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(jLabel64))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout homeLayout = new javax.swing.GroupLayout(home);
         home.setLayout(homeLayout);
         homeLayout.setHorizontalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(homeLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
+            .addGroup(homeLayout.createSequentialGroup()
+                .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
         homeLayout.setVerticalGroup(
             homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -835,12 +836,9 @@ boolean update;
                 .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(homeLayout.createSequentialGroup()
-                        .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(20, 20, 20))
-                    .addGroup(homeLayout.createSequentialGroup()
-                        .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         system.addTab("Home", home);
@@ -910,10 +908,6 @@ boolean update;
         enrollment.setLayout(enrollmentLayout);
         enrollmentLayout.setHorizontalGroup(
             enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enrollmentLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
             .addGroup(enrollmentLayout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -940,12 +934,16 @@ boolean update;
                             .addGroup(enrollmentLayout.createSequentialGroup()
                                 .addGap(175, 175, 175)
                                 .addComponent(jButton3)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(149, Short.MAX_VALUE))
                     .addGroup(enrollmentLayout.createSequentialGroup()
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton7)
                         .addGap(30, 30, 30))))
+            .addGroup(enrollmentLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         enrollmentLayout.setVerticalGroup(
             enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -962,9 +960,9 @@ boolean update;
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton6))
@@ -1636,7 +1634,7 @@ boolean update;
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(finacialLayout.createSequentialGroup()
                 .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 14, Short.MAX_VALUE))
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1674,7 +1672,7 @@ boolean update;
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -1963,7 +1961,7 @@ boolean update;
                         .addContainerGap()
                         .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(585, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logout)))
                 .addContainerGap())
             .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -2200,6 +2198,25 @@ boolean update;
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
     // Enrollment :: Enroll Button Pressed
         
+        int radio = -1;
+        if (jRadioButton1.isSelected()){
+            radio = 0;
+        } else if (jRadioButton2.isSelected()){
+            radio = 1;
+        } else if (jRadioButton3.isSelected()){
+            radio = 2;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Please select a semester.", "No Semester Selected", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (jComboBox1.getSelectedIndex() == 0)
+        {
+            // No subject was chosen
+            JOptionPane.showMessageDialog(rootPane, "Please select a course subject.", "No Subject Selected", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
         JCheckBox cb = (JCheckBox)jPanel6.getComponent(0);
         JCheckBox cb1 = (JCheckBox)jPanel6.getComponent(1);
         int n;
@@ -2210,17 +2227,6 @@ boolean update;
         String selected = jComboBox1.getSelectedItem().toString();
         
         // Evaluate which radiobutton was clicked
-        int radio = -1;
-        if (jRadioButton1.isSelected()){
-            radio = 0;
-        } else if (jRadioButton2.isSelected()){
-            radio = 1;
-        } else if (jRadioButton3.isSelected()){
-            radio = 2;
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Please select a semester to search.", "No Semester Selected", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
         
         if (radio == 0){ // Fall 2013
             //
