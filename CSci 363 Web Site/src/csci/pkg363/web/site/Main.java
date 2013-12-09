@@ -695,9 +695,12 @@ boolean update;
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel73)
-                .addContainerGap(64, Short.MAX_VALUE)
+<<<<<<< HEAD
+                .addContainerGap(64, Short.MAX_VALUE))
+=======
                 .addContainerGap(183, Short.MAX_VALUE))
-		);
+>>>>>>> c09f31dd8a3fa34ee852a7335bb88020be1de8b1
+        );
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
         jPanel14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -952,8 +955,11 @@ boolean update;
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+=======
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+>>>>>>> c09f31dd8a3fa34ee852a7335bb88020be1de8b1
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(enrollmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1629,8 +1635,11 @@ boolean update;
         );
         finacialLayout.setVerticalGroup(
             finacialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(finacialManagment, javax.swing.GroupLayout.PREFERRED_SIZE, 423, Short.MAX_VALUE)
+=======
             .addComponent(finacialManagment, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
+>>>>>>> c09f31dd8a3fa34ee852a7335bb88020be1de8b1
         );
 
         system.addTab("Financial Managment", finacial);
@@ -1668,8 +1677,11 @@ boolean update;
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+=======
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+>>>>>>> c09f31dd8a3fa34ee852a7335bb88020be1de8b1
                 .addContainerGap())
         );
 
@@ -1962,10 +1974,13 @@ boolean update;
             .addGroup(layout.createSequentialGroup()
                 .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<<<<<<< HEAD
                 .addComponent(system, javax.swing.GroupLayout.PREFERRED_SIZE, 469, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+=======
                 .addComponent(system, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
                 .addGap(18, 18, Short.MAX_VALUE)
+>>>>>>> c09f31dd8a3fa34ee852a7335bb88020be1de8b1
                 .addComponent(logout)
                 .addGap(38, 38, 38))
         );
