@@ -83,8 +83,10 @@ boolean update;
         jLabel76 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox();
-        uSubmit = new javax.swing.JButton();
         uPanel = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
         uUnenroll = new javax.swing.JButton();
         uCancel = new javax.swing.JButton();
         system = new javax.swing.JTabbedPane();
@@ -618,25 +620,47 @@ boolean update;
             }
         });
 
-        uSubmit.setText("Submit");
-        uSubmit.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox1.setText("CSci 363");
+
+        jCheckBox2.setText("CSci 464");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uSubmitActionPerformed(evt);
+                jCheckBox2ActionPerformed(evt);
             }
         });
+
+        jCheckBox3.setText("EE 201");
 
         javax.swing.GroupLayout uPanelLayout = new javax.swing.GroupLayout(uPanel);
         uPanel.setLayout(uPanelLayout);
         uPanelLayout.setHorizontalGroup(
             uPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(uPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(uPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         uPanelLayout.setVerticalGroup(
             uPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 131, Short.MAX_VALUE)
+            .addGroup(uPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox3)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         uUnenroll.setText("Unenroll");
+        uUnenroll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uUnenrollActionPerformed(evt);
+            }
+        });
 
         uCancel.setText("Cancel");
         uCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -660,9 +684,7 @@ boolean update;
                         .addGap(69, 69, 69)
                         .addComponent(jLabel77)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(uSubmit))
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(unenrollLayout.createSequentialGroup()
                             .addGap(135, 135, 135)
@@ -688,15 +710,14 @@ boolean update;
                 .addGap(18, 18, 18)
                 .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel77)
-                    .addComponent(uSubmit))
+                    .addComponent(jLabel77))
                 .addGap(18, 18, 18)
                 .addComponent(uPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(unenrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uUnenroll)
                     .addComponent(uCancel))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2435,7 +2456,8 @@ boolean update;
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
     // Enrollment:: Unenroll Button pressed
-        unenroll.setLocationRelativeTo(userSettings);
+        unenroll.setLocationRelativeTo(enrollment);
+        unenroll.setSize(450, 350);
         unenroll.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -2854,11 +2876,6 @@ boolean update;
         print.setVisible(true);
     }//GEN-LAST:event_jButton11MouseClicked
 
-    private void uSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uSubmitActionPerformed
-    // Enrollment :: Unenroll :: Submit Button Pressed
-        
-    }//GEN-LAST:event_uSubmitActionPerformed
-
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
@@ -2867,6 +2884,24 @@ boolean update;
         // TODO add your handling code here:
         unenroll.setVisible(false);
     }//GEN-LAST:event_uCancelActionPerformed
+
+    private void uUnenrollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uUnenrollActionPerformed
+    // Unenroll Window :: Submit
+        if (jCheckBox1.isSelected() || jCheckBox2.isSelected() || jCheckBox3.isSelected()){ // Selected both classes
+                int n = JOptionPane.showConfirmDialog(rootPane, "You have elected to unenroll from the following classes:\n" + jCheckBox1.getText() + "\n" + jCheckBox2.getText() + "\n\n\nAre you sure you want to do this?", "Confirmation", JOptionPane.YES_NO_OPTION);
+                if (n == 0){ // Yes to the previous dialogue is "0"
+                    
+                    // No db mods necessary
+                    
+                    JOptionPane.showMessageDialog(rootPane, "Your unenrollment has been processed successfully.", "Unenrollment Successful", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+        unenroll.setVisible(false);
+    }//GEN-LAST:event_uUnenrollActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3089,6 +3124,9 @@ boolean update;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
@@ -3239,7 +3277,6 @@ boolean update;
     private javax.swing.JPanel transcript;
     private javax.swing.JButton uCancel;
     private javax.swing.JPanel uPanel;
-    private javax.swing.JButton uSubmit;
     private javax.swing.JButton uUnenroll;
     private javax.swing.JDialog unenroll;
     private javax.swing.JButton updateFinacialAid;
